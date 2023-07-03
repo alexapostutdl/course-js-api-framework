@@ -7,7 +7,7 @@ services:
     volumes:
       - $PWD/test-reports/dev:/api-test-automation/mochawesome-report/
     network_mode: host
-    command: run BOOKS BOOKS_DEV
+    command: run greeting greetings_dev
   api-tests-stg:
     build: .
     image: alexapostu/api-tests:latest
@@ -15,7 +15,7 @@ services:
     volumes:
       - $PWD/test-reports/stg:/api-test-automation/mochawesome-report/
     network_mode: host
-    command: run BOOKS BOOKS_STG
+    command: run greeting greetings_stg
   api-tests-prd:
     build: .
     image: alexapostu/api-tests:latest
@@ -23,7 +23,7 @@ services:
     volumes:
       - $PWD/test-reports/prd:/api-test-automation/mochawesome-report/
     network_mode: host
-    command: run BOOKS BOOKS_PRD
+    command: run greeting greetings_prod
 
 
 # docker run -v $PWD/test-reports:/api-test-automation/mochawesome-report/ --network=host --rm api-tests run BOOKS BOOKS_DEV0.2
