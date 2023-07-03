@@ -2,7 +2,7 @@ version: '3.8'
 services:
   api-tests-dev:
     build: .
-    image: api-tests
+    image: alexapostu/api-tests:latest
     container_name: api-test-dev
     volumes:
       - $PWD/test-reports/dev:/api-test-automation/mochawesome-report/
@@ -10,7 +10,7 @@ services:
     command: run BOOKS BOOKS_DEV
   api-tests-stg:
     build: .
-    image: api-tests
+    image: alexapostu/api-tests:latest
     container_name: api-test-stg
     volumes:
       - $PWD/test-reports/stg:/api-test-automation/mochawesome-report/
@@ -18,7 +18,7 @@ services:
     command: run BOOKS BOOKS_STG
   api-tests-prd:
     build: .
-    image: api-tests
+    image: alexapostu/api-tests:latest
     container_name: api-test-prd
     volumes:
       - $PWD/test-reports/prd:/api-test-automation/mochawesome-report/
