@@ -26,4 +26,4 @@ services:
     command: run BOOKS BOOKS_PRD
 
 
-# docker run -v $PWD/test-reports:/api-test-automation/mochawesome-report/ --network=host --rm api-tests run BOOKS BOOKS_DEV
+# docker run -v $PWD/test-reports:/api-test-automation/mochawesome-report/ --network=host --rm api-tests run BOOKS BOOKS_DEV0.2
